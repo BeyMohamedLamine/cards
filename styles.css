@@ -1,0 +1,99 @@
+html, body{
+    margin: 0 0;
+    padding: 0 0;
+    overflow-x: hidden;
+}
+body {
+    background-image: url("background.jpg");
+    background-repeat: repeat;
+    background-size: 80%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+.effect {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e9f7fb;
+    opacity: 70%;
+    position: fixed;
+    z-index: -1;
+}
+#main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+    text-align: center;
+    font-family: "Cairo";
+}
+#Smiley {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 40vw;
+    border-radius: 50%;
+    border:1vw solid #2a5149;
+}
+h1 {
+    font-size: 12vw;
+    font-weight: 900;
+    margin-top: 0;
+}
+.txt-box {
+    width: 100%;
+    background-color: #57a898;
+    color: #140a0c;
+    padding: 5%;
+    border-radius: 5vw;
+    border: 1vw solid #2a5149;
+    margin-left: -3vw;
+}
+.text {
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 90%;
+    font-weight: 700 ;
+    margin-top: -5%;
+}
+ul {
+    text-align: right;
+    list-style: none;
+}
+/*ul li:before {
+    content: '✓';
+  }*/
+button {
+    background-color: #2a5149;
+    width: 30%;
+    border-radius: 20px;
+    border: 2px solid #2a5149;
+    font-family: "Cairo";
+    transition-duration: 0.5s;
+    color: #e9f7fb;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #e9f7fb;
+    color: #2a5149;
+}
+header {
+    font-size: 6vw;
+    font-weight: 700;
+}
+.div {
+    background-color: #2a5149;
+    color: #e9f7fb;
+    padding: 3%;
+}
+.txt-box p {
+    font-weight: 700;
+}
+footer {
+    background-color: #e9f7fb;
+    width: 100%;
+}
+footer ul {
+    text-align: left;
+}
