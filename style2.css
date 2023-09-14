@@ -44,13 +44,16 @@ span{
     font-weight: 800;
 }
 
-@media only screen and(max-width: 430px) {
-    form{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+@media only screen and  (max-width: 430px) {
+    html, body{
+        overflow-y: scroll;
     }
-    input, textarea, select{
-        display: block;
+    form{
+        width: 90%;
+        margin-top: 0px;
+    }
+    input, select, textarea{
+        width: 100%;
+        margin-top: 2%;
     }
 }
