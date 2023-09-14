@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submiting page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="filter"></div>
+    
+    <form id="orderForm" action="https://formsubmit.co/mohamedlaminebusiness2023@gmail.com" method="POST">
+        <h1>Order Form</h1>
+        <label for="companyName">Company Name (اسم المؤسسة):</label>
+        <input type="text" id="companyName" name="companyName" required><br><br>
+
+        <label for="ownerName">Owner's Name(اسم المدير):</label>
+        <input type="text" id="ownerName" name="ownerName" required><br><br>
+
+        <label for="companyLocation">Location(الموقع):</label><br>
+        <textarea id="companyLocation" name="companyLocation" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="email">Email(البريد الالكتروني):</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phoneNumber">Phone Number(رقم الهاتف):</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+        <label for="serviceType">Service Type(نوع الخدمة):</label>
+        <select id="serviceType" name="serviceType" required>
+            <option value="500">وجه واحد بسيط (500DA)</option>
+            <option value="1500">وجه واحد احترافي (1500DA)</option>
+            <option value="1000">وجهين بسيط (1000DA)</option>
+            <option value="2000">وجهين احترافي (2000DA)</option>
+        </select><br><br>
+
+        <label for="addon">Remove URL?(ازالة الرابط؟):</label>
+        <select id="addon" name="addon" required>
+            <option value="yes">Yes(نعم)(+500DA)</option>
+            <option value="no">No(لا)</option>
+        </select><br><br>
+
+        <p>Total Price(السعر الاجمالي): <span id="totalPrice">0</span></p>
+
+        <button id="submit" type="submit" onclick="sendToEmail()">submit</button>
+    </form>
+    
+
+    <script>
+        const orderForm = document.getElementById("orderForm");
+        const serviceTypeSelect = document.getElementById("serviceType");
+        const addonSelect = document.getElementById("addon");
+        const totalPriceSpan = document.getElementById("totalPrice");
+
+        // Event listener to update total price when form values change
+        orderForm.addEventListener("change", updateTotalPrice);
+
+        function updateTotalPrice() {
+            const serviceTypeValue = parseInt(serviceTypeSelect.value);
+            const addonValue = addonSelect.value === "yes" ? 500 : 0;
+            const totalPrice = serviceTypeValue + addonValue;
+
+            totalPriceSpan.textContent = "DA" + totalPrice;
+        }
+
+        // Initial price calculation
+        updateTotalPrice();
+    </script>
+</body>
+</html>
